@@ -9,6 +9,11 @@ class MemoryGame {
 
   shuffleCards() {
     // ... write your code here
+    for (let ind = 0; ind < this.cards.length; ind++){
+      let nextInd = Math.floor(Math.random()*this.cards.length)
+      ;[this.cards[ind], this.cards[nextInd]] = [this.cards[nextInd], this.cards[ind]]
+    }
+    console.log(this.cards)
   }
 
   checkIfPair(card1, card2) {
